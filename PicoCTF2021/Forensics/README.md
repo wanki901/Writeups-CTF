@@ -51,7 +51,7 @@ Extract this file we have a file that has an extension `img`. An `img` file is a
 
 `imf` files created by different disk imaging programs may use different formats. For example, IMG files created by SlySoft CloneCD must be paired with an associated `.CCD` and `.SUB` file before they can be used to create a disc. Before using an `img` file to create a new disc, you should attempt to determine what program created the `img` file and check whether your disc-authoring program can burn files saved in that format.
 
-In Kali Linux, we have a tool which named Sleuth Kit. Sleuth Kit is a collection of command line tools and a C library that allows you to analyze disk images and recover files from them. It is used behind the scenes in Autopsy and many other open source and commercial forensics tools.
+In Kali Linux, we have a tool which named Sleuth Kit. [Sleuth Kit](https://www.sleuthkit.org/sleuthkit/) is a collection of command line tools and a C library that allows you to analyze disk images and recover files from them. It is used behind the scenes in Autopsy and many other open source and commercial forensics tools.
 
 So this challenge tells we forensic disk image by using `srch_string` command in Sleuth Kit.
 
@@ -62,6 +62,35 @@ So this challenge tells we forensic disk image by using `srch_string` command in
 ## FLAG
 
 `picoCTF{f0r3ns1c4t0r_n30phyt3_564ff1a0}`
+
+# CHALLENGE NAME: DISK, DISK, SLEUTH II!
+
+## DESCRIPTION
+
+All we know is the file with the flag is named `down-at-the-bottom.txt`... Disk image: dds2-alpine.flag.img.gz
+
+## ATTACHMENTS
+
+[dds2-alpine.flag.img.gz](https://mercury.picoctf.net/static/2e54f22211165e9f33a47bdb8a09268b/dds2-alpine.flag.img.gz)
+
+## METHODOLOGY
+
+As same as previous challenge `Disk, Disk, Sleuth!`, after extrace we have a file which is a disk image file. But we don't use Sleuth Kit command in Kali Linux again, because of the decsription of this challenge let we know the name of file contains the flag. So I will use Autopsy for easy to find and check the file. [Autopsy](https://www.sleuthkit.org/autopsy/) is an easy to use, GUI-based program that allows you to efficiently analyze hard drives and smart phones. It has a plug-in architecture that allows you to find add-on modules or develop custom modules in Java or Python.
+
+## EXPLOIT
+
+  Open this file with Autopsy.
+
+![image](https://user-images.githubusercontent.com/84057292/134303113-384f73fa-bcc6-4ef1-95af-79d406a140f4.png "Autopsy")
+
+  Use `File Search by Attributes` in Tools to search nanme of the file `down-at-the-bottom.txt`
+  
+  ![image](https://user-images.githubusercontent.com/84057292/134305616-e8113230-2bb1-4aab-b767-16b17ead80fb.png)
+
+I really found this file, let check it.
+
+![image](https://user-images.githubusercontent.com/84057292/134305879-af4fc9da-8ef7-493b-9014-91c8fa88018d.png)
+
 
 
 
