@@ -115,10 +115,52 @@ file.close()
 print(flag)
 ```
 
-# FLAG
+## FLAG
 
 `picoCTF{f0r3ns1c4t0r_n0v1c3_db59daa5}`
 
+# CHALLENGER NAME: tunn3l v1s10n
+
+## DESCRIPTION
+
+We found this __file__. Recover the flag.
+
+## ATTACHMENTS
+
+[file](https://mercury.picoctf.net/static/21c07c9dd20cd9f2459a0ae75d99af6e/tunn3l_v1s10n)
+
+## METHODOLOGY
+
+After download this file. We can see this file doesn't have a file extension. So I used [HxD](https://mh-nexus.de/en/hxd/) to check this file.
+
+![image](https://user-images.githubusercontent.com/84057292/134481777-6d95dfdb-9b44-4b21-9c9d-a131d4454ad0.png "view by HxD")
+
+To determine the file type, we usually use about the first 4 bytes to determine. I used this website to check type of file: [File Signature](https://www.garykessler.net/library/file_sigs.html)
+
+![image](https://user-images.githubusercontent.com/84057292/134481601-abe9594f-9608-484a-8d20-fe0e92c9e247.png "File Signatures")
+
+So, this file is a BMP file. I added `.bmp` extension and opened it but I only get this.
+
+![image](https://user-images.githubusercontent.com/84057292/134482958-23675050-4415-4e7d-a92e-e6dd83b365f6.png)
+
+Just calm down and recall the description said recover the flag. So I think our task is to correct the wrong hex byte so that the image can be viewed.
+
+I used this [site](https://asecuritysite.com/forensics/bmp?file=activated.bmp) to compare this file with the standard `bmp` file. After compared, I found wrong byte.
+
+```
+Bytes 15 - 18: BA D0 00 00 -> 28 00 00 00
+```
+ I can view this image but it doesn't contain flag.
+ 
+ ![image](https://cdn.discordapp.com/attachments/871393677304553473/890537263895838720/tunn3l_v1s10n.bmp)
+ 
+ I feel there is a big difference in the height and width of the picture. So, I tried expand the image horizontally. When I change `32 01` to `32 02`, I was able to see more of the top of the picture. But it still doesn't have the flag. I continued to change `32 02` to `32 03`. Finally I can get the flag.
+ 
+![image](https://cdn.discordapp.com/attachments/871393677304553473/890546777248395334/tunn3l_v1s10n.bmp)
+
+## FLAG
+
+`picoCTF{qu1t3_a_v13w_2020}`
 
 
 
