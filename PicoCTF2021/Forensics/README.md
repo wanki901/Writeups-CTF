@@ -91,6 +91,34 @@ I really found this file, let check it.
 
 ![image](https://user-images.githubusercontent.com/84057292/134305879-af4fc9da-8ef7-493b-9014-91c8fa88018d.png)
 
+Get this file and check it.
+
+![image](https://user-images.githubusercontent.com/84057292/134477203-40b1b011-2024-46b9-b202-4f3e5d175c32.png)
+
+I'm very lazy to type each letter one by one to submit the flag. So I write a short code to get the flag by Python.
+
+```
+flag = ""
+countLine = 0
+index = [3, 7, 11]
+
+file = open("down-at-the-bottom.txt", "r")
+
+for line in file:
+    countLine += 1
+    if countLine in index:
+        for i in line:
+            if (i >= '0' and i <= '9') or (i >= 'A' and i <= 'Z') or (i >= 'a' and i <= '}') or i is '_':
+                flag += i
+
+file.close()
+print(flag)
+```
+
+# FLAG
+
+`picoCTF{f0r3ns1c4t0r_n0v1c3_db59daa5}`
+
 
 
 
