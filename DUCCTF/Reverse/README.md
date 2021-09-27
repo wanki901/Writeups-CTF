@@ -18,8 +18,9 @@ Use IDA Pro to decompiled the file. In main function, I saw a variable named `fo
 So, I double click it to check it. And I saw the flag near by it.
 
 <p align = center>
-  <img src="https://user-images.githubusercontent.com/84057292/134955722-f0795f19-be88-4665-ba48-8527dd18b236.png>
+  <img src="https://user-images.githubusercontent.com/84057292/134955722-f0795f19-be88-4665-ba48-8527dd18b236.png">
 </p>
+
 ## FLAG
 
 `DUCTF{stringent_strings_string}`
