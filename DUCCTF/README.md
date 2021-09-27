@@ -8,8 +8,8 @@ Here are the challenges that I solved in this contest.
 | Challenge Name | Quantity | 
 |--------------|-------|
 | [OSINT](https://github.com/wanki901/Writeups-CTF/tree/main/DUCCTF/OSINT) | 2 | 
-| [Forensic] | 1 |
+| [Forensic](https://github.com/wanki901/Writeups-CTF/tree/main/DUCCTF/Forensics) | 1 |
 | [Cloud](https://github.com/wanki901/Writeups-CTF/tree/main/DUCCTF/Cloud) | 1 | 
 | [Rwn](https://github.com/wanki901/Writeups-CTF/tree/main/DUCCTF/pwn) | 2 |
-| [Reverse] | 1 |
-| [Misc] | 1 |
+| [Reverse](https://github.com/wanki901/Writeups-CTF/tree/main/DUCCTF/Reverse) | 1 |
+| [Misc](https://github.com/wanki901/Writeups-CTF/tree/main/DUCCTF/Misc) | 1 |
