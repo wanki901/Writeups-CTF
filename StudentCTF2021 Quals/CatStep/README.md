@@ -76,20 +76,19 @@ def query(body):
 charUsed = ['0', '5', 'a', 'b', 'c', 'e', 'f', 'g', 'i', 'n', 's', 't', 'u', 'w', 'y', 'z', 'A', 'F', 'G', 'O', 'S', '_'] 
 
 Levenshtein_distance = 28   
-flag = list("spbctf{rrrrrrrrrrrrrrrrrrrrrrrrrrrr}")             #format of flag, I use characters "r" because it doesn't in charUsed
+flag = list("spbctf{rrrrrrrrrrrrrrrrrrrrrrrrrrrr}")         #format of flag, I used characters "r" because it doesn't in charUsed
 
 #Get each element in charUsed in turn replacing each position in the string "rrr...rrr"
 for i in charUsed:
     for j in range(7,35):
-        #if j not in _index:
-            pre_flag = ''.join(flag)
-            flag[j] = i
-            body = {"flag": ''.join(flag)}
-            responsed = query(body)
-            if str(Levenshtein_distance - 1) not in responsed:  #check if this character is correct
-                flag = list(pre_flag)
-            else:
-                Levenshtein_distance -= 1
+        pre_flag = ''.join(flag)
+        flag[j] = i
+        body = {"flag": ''.join(flag)}
+        responsed = query(body)
+        if str(Levenshtein_distance - 1) not in responsed:  #check if this character is correct
+            flag = list(pre_flag)
+        else:
+            Levenshtein_distance -= 1
 
 print(''.join(flag))
 ```
