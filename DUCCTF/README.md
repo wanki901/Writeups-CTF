@@ -10,6 +10,6 @@ Here are the challenges that I solved in this contest.
 | [OSINT](https://github.com/wanki901/Writeups-CTF/tree/main/DUCCTF/OSINT) | 2 | 
 | [Forensic](https://github.com/wanki901/Writeups-CTF/tree/main/DUCCTF/Forensics) | 1 |
 | [Cloud](https://github.com/wanki901/Writeups-CTF/blob/main/DUCCTF/Cloud/Cloud.md) | 1 | 
-| [Rwn](https://github.com/wanki901/Writeups-CTF/tree/main/DUCCTF/pwn/Pwn.md) | 2 |
+| [Pwn](https://github.com/wanki901/Writeups-CTF/tree/main/DUCCTF/pwn/Pwn.md) | 2 |
 | [Reverse](https://github.com/wanki901/Writeups-CTF/tree/main/DUCCTF/Reverse) | 1 |
 | [Misc](https://github.com/wanki901/Writeups-CTF/tree/main/DUCCTF/Misc) | 1 |
